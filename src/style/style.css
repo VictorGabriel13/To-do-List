@@ -1,7 +1,9 @@
+
 body{
     background-color: #212529;
     color: #DEE2E6;
     font-family: Arial;
+    min-height: 100vh;
 }
 header {
     margin-top: -50px;
@@ -19,7 +21,7 @@ header p {
     left: 50%;
     padding: 40px;
     width: 20%;
-    height: 36%;
+    height: 30%;
     border-radius: 15px;
     text-align: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.148);
@@ -39,17 +41,23 @@ input {
     padding: 10px;
     background-color: #212529;
     color: #DEE2E6;
-    margin: 10px;
+    margin: 15px;
     font-size: 17px;
     border: 0;
     outline: none;
     margin-left: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.148);
 }
 input[type="CheckBox"]{
+    accent-color: #0bd76e;
     transform: scale(2.1);
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.148);
 }
-#btn-rotina {
-    background-color: #0B5ED7;
+#Alert {
+    /* Tom de Verde Legal #0bd76e*/
+    background-color: #0bd76e;
+    display: none;
     color: #DEE2E6;
     border: none;
     border-radius: 10px;
@@ -57,11 +65,15 @@ input[type="CheckBox"]{
     font-size: 17px;
     margin-top: 20px;
     cursor: pointer;
+    transition: 1.5s ease;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.159);
 }
-#btn-rotina:hover {
+#Alert:hover {
     background-color: #5491ed;
 }
+#Alert.erro {
+    background: #dc143c;
+  }
 #inline {
     background-color: #1b1d20;
     position: absolute;
@@ -82,7 +94,7 @@ input[type="CheckBox"]{
     outline: none;
     font-size: 17px;
     border-radius: 10px;
-    width: 10%;
+    width: 20%;
     margin-right: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.279);
 }
@@ -90,3 +102,20 @@ input[type="CheckBox"]{
     background-color: #5491ed;
     cursor: pointer;
 }
+footer {
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    width: 95%;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
+    background-color: #1b1d20;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.148);
+  }
+  
+  .footer-container {
+    width: 95%;
+  }
