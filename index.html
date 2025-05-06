@@ -6,7 +6,7 @@
     <title>To-do List</title>
     <link rel="stylesheet" href="src/style/style.css">
 </head>
-<body>
+<body onload="guardarRotina()">
     <nav class="TopBar">
         <p>Seja-Bem Vindo!!!</p>
         <button type="button" id="Login-suap">Login Suap</button>
@@ -20,13 +20,13 @@
         <section class="container-row">
         <div>
             <input type="checkbox" onclick="verificarRotina()" name="CheckBox1" class="todo-check">
-            <input type="text" id="Item1" name="Item1" value="Estudar">
+            <input type="text" class="todo-text" oninput="rotinaText()" placeholder="Digite uma Atividade" value="Estudar">
         </div>
     </section>
     <section class="container-colum">
         <div>
             <input type="checkbox" name="CheckBox2" onclick="verificarRotina()" class="todo-check">
-            <input type="text" id="Item2" name="Item2" value="Jogar Basquete">
+            <input type="text" class="todo-text" oninput="rotinaText()" placeholder="Digite uma Atividade" value="Jogar Basquete">
         </div>
     </section>
     <div id="Alert"></div>
