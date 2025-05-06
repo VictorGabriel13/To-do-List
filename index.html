@@ -8,8 +8,8 @@
 </head>
 <body onload="guardarRotina()">
     <nav class="TopBar">
-        <p>Seja-Bem Vindo!!!</p>
-        <button type="button" id="Login-suap">Login Suap</button>
+        <p><strong>Seja Bem Vindo</strong> <span style="font-weight: bold;" id="nome"></span></p>
+        <button type="button" id="Login-suap" onclick="login()">Login Suap</button>
     </nav>
     <section class="Main">
         <header>
@@ -37,5 +37,42 @@
         </div>
       </footer>      
     <script src="src/script/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="src/app/js.cookie.js"></script>
+	<script src="src/app/settings.js"></script>
+  	<script src="src/app/client.js"></script>
+    <script>
+      var suap = new SuapClient(SUAP_URL, CLIENT_ID, REDIRECT_URI, SCOPE);
+      suap.init();
+      $(document).ready(function () {
+      		//$("#suap-login-button").attr('href', suap.getLoginURL());
+          if (suap.isAuthenticated()) {
+              var scope = suap.getToken().getScope();
+              var callback = function (response) {
+                  //$("#ident").text(JSON.stringify(response, null, 4)); //aqui vai mostrar todos os dados possíveis.
+                  $("#nome").text(response.nome);
+                  $("#campus").text(response.campus);
+                  //aqui você vai adicionando os outros campos possíveis.
+              };
+             suap.getResource(scope, callback);
+          }
+      });
+      $("#suap-logout-button").click(function(){
+          suap.logout();
+          window.location.href = "index.html";
+      });  
+      function login() {
+        var loginButton = document.getElementById("Login-suap");
+        loginButton.innerHTML = 'Carregando...'
+        setTimeout(() => {
+            window.location.href = suap.getLoginURL();
+        }, 3000);
+        if(loginButton.click = true) {
+            setTimeout(() => {
+                loginButton.innerHTML = 'Autenticado com Sucesso';
+            }, 3000);
+        }
+      }
+    </script>
 </body>
 </html>
