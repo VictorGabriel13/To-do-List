@@ -146,12 +146,12 @@
         font-size: 17px;
         border: 0;
         outline: none;
-        margin-left: -10px;
+        margin-left: -5px;
     }
     input[type="CheckBox"]{
         margin-left: 10px;
         align-items: center;
-        accent-color: #0bd76e;
+        accent-color: #dc143c;
         width: 30px;
         transform: scale(2.1);
         cursor: pointer;
