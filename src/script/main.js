@@ -61,3 +61,7 @@ function guardarRotina() {
         });
     }
 }
+function resetarRotina() {
+    localStorage.clear();
+    location.reload(); // recarrega a página para limpar os inputs visuais
+}

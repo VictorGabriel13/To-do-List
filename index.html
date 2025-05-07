@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do List</title>
     <link rel="stylesheet" href="src/style/style.css">
+    <link rel="stylesheet" href="src/style/mobaStyle.css">
+    <link rel="shortcut icon" href="src/img/list-logo.webp" type="image/x-icon">
 </head>
 <body onload="guardarRotina()">
     <nav class="TopBar">
-        <p><strong>Seja Bem Vindo</strong> <span style="font-weight: bold;" id="nome"></span></p>
+        <p><strong>Seja Bem Vindo,</strong> <span style="font-weight: bold;" id="nome"></span></p>
         <button type="button" id="Login-suap" onclick="login()">Login Suap</button>
     </nav>
     <section class="Main">
@@ -43,6 +45,7 @@
   	<script src="src/app/client.js"></script>
     <script>
       var suap = new SuapClient(SUAP_URL, CLIENT_ID, REDIRECT_URI, SCOPE);
+      var welcome = document.getElementById('Welcome');
       suap.init();
       $(document).ready(function () {
       		//$("#suap-login-button").attr('href', suap.getLoginURL());
