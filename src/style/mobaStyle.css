@@ -1,1 +1,43 @@
 
+@media screen and (min-width: 360px) and (max-width: 720px) {
+    body{
+        background-color: #212529;
+        color: #DEE2E6;
+        font-family: Arial;
+        min-height: 100vh;
+    }
+    header {
+        margin-top: -50px;
+        font-size: 27px;
+    }
+    header p {
+        font-size: 20px;
+        margin-top: -30px;
+    }
+    .Main {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        padding: 40px;
+        width: 80%;
+        height: 50%; /* ou 30% da tela*/
+        border-radius: 15px;
+        text-align: center;
+    }
+    input {
+        border-radius: 15px;
+        padding: 10px;
+        margin: 15px;
+        font-size: 17px;
+        border: 0;
+        width: 20%;
+        outline: none;
+        margin-left: 10px;
+    }
+    input[type="CheckBox"]{
+        accent-color: #0bd76e;
+        transform: scale(2.1);
+        cursor: pointer;
+    }
+}
