@@ -1,6 +1,6 @@
 /* Para Telas entre 412 até 720*/
 
-@media screen and (min-width:360px) and (max-width: 380px) {
+@media screen and (min-width:360px) and (max-width: 390px) {
     body{
         font-family: Arial;
         min-height: 100vh;
