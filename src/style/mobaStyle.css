@@ -47,7 +47,7 @@
     input[type="CheckBox"]{
         margin-left: 10px;
         align-items: center;
-        accent-color: #0bd76e;
+        accent-color: #dc143c;
         width: 30px;
         transform: scale(2.1);
         cursor: pointer;
@@ -151,7 +151,7 @@
     input[type="CheckBox"]{
         margin-left: 10px;
         align-items: center;
-        accent-color: #dc143c;
+        accent-color: #0bd76e;
         width: 30px;
         transform: scale(2.1);
         cursor: pointer;
