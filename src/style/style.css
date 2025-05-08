@@ -55,8 +55,8 @@ input[type="CheckBox"]{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.148);
 }
 #Alert {
-    /* Tom de Verde Legal #0bd76e*/
-    background-color: #0bd76e;
+    /* Tom de Verde Legal #099452 ou #1c7f55*/
+    background-color: #099452;
     display: none;
     color: #DEE2E6;
     border: none;
@@ -67,9 +67,6 @@ input[type="CheckBox"]{
     cursor: pointer;
     transition: 1.5s ease;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.159);
-}
-#Alert:hover {
-    background-color: #5491ed;
 }
 #Alert.erro {
     background: #dc143c;
