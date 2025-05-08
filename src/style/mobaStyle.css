@@ -20,24 +20,96 @@
         top: 50%;
         left: 50%;
         padding: 40px;
-        width: 80%;
-        height: 50%; /* ou 30% da tela*/
+        width: 70%;
+        height: 28%; /* ou 30% da tela*/
         border-radius: 15px;
         text-align: center;
+    }
+    .container-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .container-colum {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     input {
         border-radius: 15px;
         padding: 10px;
         margin: 15px;
         font-size: 17px;
-        border: 0;
-        width: 20%;
+        width: 70%;
         outline: none;
-        margin-left: 10px;
+        margin-left: -5px;
     }
     input[type="CheckBox"]{
         accent-color: #0bd76e;
         transform: scale(2.1);
+        width: 15px;
         cursor: pointer;
     }
+    #Alert {
+        /* Tom de Verde Legal #0bd76e*/
+        background-color: #0bd76e;
+        display: none;
+        color: #DEE2E6;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 17px;
+        margin-top: 10%;
+        cursor: pointer;
+        transition: 1.5s ease;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.159);
+    }
+    #Alert:hover {
+        background-color: #5491ed;
+    }
+    #Alert.erro {
+        background: #dc143c;
+      }
+    #inline {
+        background-color: #1b1d20;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100%;
+        height: 3px;
+    }
+    .TopBar {
+        display: flex;
+        justify-content: space-between;
+    }
+    #Login-suap {
+        background-color: #0B5ED7;
+        color: #DEE2E6;
+        padding: 5px;
+        border: none;
+        outline: none;
+        font-size: 17px;
+        border-radius: 10px;
+        width: 35%;
+        white-space: nowrap;
+        margin-right: 10px;
+    }
+    #Login-suap:hover {
+        background-color: #5491ed;
+        cursor: pointer;
+    }
+    footer {
+        position: fixed;
+        top: 95%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        text-align: center;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.148);
+      }
+      
+      .footer-container {
+        width: 100%;
+      }
 }
