@@ -45,7 +45,7 @@
         margin-left: -5px;
     }
     input[type="CheckBox"]{
-        accent-color: #0bd76e;
+        accent-color: #dc143c;
         transform: scale(2.1);
         width: 15px;
         cursor: pointer;
