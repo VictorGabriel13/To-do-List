@@ -40,7 +40,7 @@
     }
     input[type="CheckBox"]{
         accent-color: #0bd76e;
-        transform: scale(2.5);
+        transform: scale(2.1);
         cursor: pointer;
     }
     #TopBar {
