@@ -16,7 +16,7 @@
     .Main {
         position: absolute;
         transform: translate(-50%, -50%);
-        top: 50%;
+        top: 65%;
         left: 50%;
         padding: 40px;
         width: 70%;
@@ -24,33 +24,46 @@
         border-radius: 15px;
         text-align: center;
     }
-    .container-row {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        
-    }
-    .container-colum {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    input {
+    input[type="text"] {
         border-radius: 15px;
         padding: 10px;
         margin: 15px;
         font-size: 17px;
-        width: 65%;
+        margin-left: 10px;
+        width: 160px;
         outline: none;
-        margin-left: -5px;
+    }
+    div > ul> li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
     input[type="CheckBox"]{
         accent-color: #0bd76e;
-        transform: scale(2.1);
-        width: 15px;
+        transform: scale(2.5);
         cursor: pointer;
-        margin-left: 15px;
     }
+    #TopBar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #TopBar > div {
+    background-color: #2B3035;
+    width: 75%;
+    padding: 20px;
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.148);
+}
+#TopBar > div > p {
+    margin-top: -10px;
+}
+
     #Alert {
         /* Tom de Verde Legal #0bd76e*/
         display: none;
@@ -71,17 +84,13 @@
         width: 100%;
         height: 3px;
     }
-    .TopBar {
-        display: flex;
-        justify-content: space-between;
-    }
     #Login-suap {
         padding: 5px;
         border: none;
         outline: none;
         font-size: 17px;
         border-radius: 10px;
-        width: auto;
+        width: 50%;
         white-space: nowrap;
         margin-right: 10px;
     }
@@ -90,17 +99,21 @@
         cursor: pointer;
     }
     footer {
+        margin-top: 20%;
         position: fixed;
-        top: 95%;
+        top: 87%;
         left: 50%;
         width: 100%;
+        height: 30px;
         transform: translate(-50%, -50%);
-        padding: 20px;
+        padding: 10px;
         text-align: center;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.148);
       }
       
       .footer-container {
+        position: absolute;
+        top: 2%;
         width: 100%;
       }
 }

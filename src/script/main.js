@@ -26,7 +26,7 @@ function verificarRotina() {
         msgAlert.innerHTML = '';
         msgAlert.style.display = 'none';
         msgAlert.classList.remove('erro'); // volta para cor padrão
-    }, 10000);
+    }, 10000); // 10 Segundos
 }
 
 function rotinaText() {
@@ -62,6 +62,52 @@ function guardarRotina() {
     }
 }
 function resetarRotina() {
-    localStorage.clear();
-    location.reload(); // recarrega a página para limpar os inputs visuais
+    const hoje = new Date().toLocaleDateString(); // Ex: "17/05/2025"
+    const ultimaData = localStorage.getItem('ultimaData');
+
+    // Essa Função compara a data de hoje com a última data salva. Se for um novo dia, ele limpa o localStorage, atualiza a data e recarrega a página.
+
+    if (ultimaData !== hoje) {
+        localStorage.clear();
+        localStorage.setItem('ultimaData', hoje); // Salva a nova data
+        location.reload(); // Recarrega a página para limpar inputs visuais
+    }
 }
+ 
+/* function mostrarHoras() {
+    const idTime = document.getElementById("time");
+    const horaAtual = new Date();
+
+    // Formata a hora no estilo HH:MM:SS
+    const horaFormatada = horaAtual.toLocaleTimeString();
+
+    // Insere a hora formatada no span
+     
+        idTime.textContent = horaFormatada + "AM";
+
+}
+
+// Chama a função uma vez ao carregar
+mostrarHoras();
+
+// Atualiza a cada segundo
+setInterval(mostrarHoras, 1000); */
+
+function mostrarHoras() {
+    const idTime = document.getElementById("time");
+    const horaAtual = new Date().toLocaleString();
+    let hora = horaAtual // pega a hora atual (0-23)
+    let horaFormatada = hora > 12 ? hora - 12 : (hora === 0 ? 12 : hora); // converte para 12h
+    let periodo = hora >= 12 ? "PM" : "AM"; // define AM ou PM
+
+
+    // Insere a hora formatada no span
+    idTime.textContent = horaFormatada + periodo;
+
+}
+
+// Chama a função uma vez ao carregar
+mostrarHoras();
+
+// Atualiza a cada segundo
+setInterval(mostrarHoras, 1000);

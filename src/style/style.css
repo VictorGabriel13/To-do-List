@@ -26,33 +26,34 @@ header p {
     text-align: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.148);
 }
-.container-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.container-colum {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-input {
+input[type="text"] {
     border-radius: 15px;
+    margin: 15px;
     padding: 10px;
     background-color: #212529;
     color: #DEE2E6;
-    margin: 15px;
     font-size: 17px;
     border: 0;
     outline: none;
     margin-left: 10px;
+    width: 70%;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.148);
+}
+input[type="text"]::placeholder {
+    padding-left: 5px;
 }
 input[type="CheckBox"]{
     accent-color: #0bd76e;
     transform: scale(2.1);
     cursor: pointer;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.148);
+}
+ul, li {
+    list-style: none;
+    margin-top: -2px;
+    justify-items: center;
+}
+section > div > ul {
+    margin-right: 30px;
 }
 #Alert {
     /* Tom de Verde Legal #099452 ou #1c7f55*/
@@ -63,7 +64,7 @@ input[type="CheckBox"]{
     border-radius: 10px;
     padding: 10px;
     font-size: 17px;
-    margin-top: 20px;
+    margin-top: 15px;
     cursor: pointer;
     transition: 1.5s ease;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.159);
@@ -79,9 +80,22 @@ input[type="CheckBox"]{
     width: 100%;
     height: 3px;
 }
-.TopBar {
+#TopBar {
     display: flex;
     justify-content: space-between;
+}
+#TopBar > div {
+    background-color: #2B3035;
+    width: 20%;
+    padding: 40px;
+    width: 20%;
+    height: auto; /* ou 30% da tela*/
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.148);
+}
+#TopBar > div > p {
+    margin-top: -10px;
 }
 #Login-suap {
     background-color: #0B5ED7;
@@ -91,7 +105,7 @@ input[type="CheckBox"]{
     outline: none;
     font-size: 17px;
     border-radius: 10px;
-    width: 20%;
+    width: 50%;
     margin-right: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.279);
 }

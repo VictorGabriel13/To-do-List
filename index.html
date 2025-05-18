@@ -9,36 +9,43 @@
     <link rel="shortcut icon" href="src/img/list-logo.webp" type="image/x-icon">
 </head>
 <body onload="guardarRotina()">
-    <nav class="TopBar">
-        <p><strong>Seja Bem Vindo,</strong> <span style="font-weight: bold;" id="nome"></span></p>
-        <button type="button" id="Login-suap" onclick="login()">Login Suap</button>
-    </nav>
-    <section class="Main">
+    <section id="TopBar">
+        <p><strong>Seja Bem Vindo</strong> <span style="font-weight: bold;" id="nome"></span></p>
+            <div>
+                <h1>Sobre o Site:</h1>
+                <p>Nesse Site você Consegue Criar e Organizar a sua Rotina, Temos integração com o SUAP IFRN e Suporte para dispositivos moveis.</p>
+                <button type="button" id="Login-suap" onclick="login()">Login Suap</button>
+            </div>
+            <p style=" position: absolute;float: left; top: 5%;"><strong>Time: <span id="time"></span></strong></p>
+    <main class="Main">
         <header>
             <h1>To - do List</h1>
             <p>Crie e Organize a sua Rotina do Jeito Certo.</p>
         </header>
         <div id="inline"></div>
-        <section class="container-row">
-        <div>
-            <input type="checkbox" onclick="verificarRotina()" name="CheckBox1" class="todo-check">
-            <input type="text" class="todo-text" oninput="rotinaText()" placeholder="Digite uma Atividade" value="Estudar">
-        </div>
-    </section>
     <section class="container-colum">
         <div>
-            <input type="checkbox" name="CheckBox2" onclick="verificarRotina()" class="todo-check">
-            <input type="text" class="todo-text" oninput="rotinaText()" placeholder="Digite uma Atividade" value="Jogar Basquete">
+            <ul>
+                <li>
+                    <input type="checkbox" onclick="verificarRotina()" name="CheckBox1" class="todo-check">
+                    <input type="text" class="todo-text" oninput="rotinaText()" placeholder="Digite uma Atividade" value="Estudar">
+                </li>
+                <li>
+                    <input type="checkbox" name="CheckBox2" onclick="verificarRotina()" class="todo-check">
+                    <input type="text" class="todo-text" oninput="rotinaText()" placeholder="Digite uma Atividade" value="Jogar Basquete">
+                </li>
+            </ul>
         </div>
     </section>
     <div id="Alert"></div>
-    </section>
+    </main>
     <footer>
         <div class="footer-container">
           <p>&copy; 2025 - Todos os direitos reservados</p>
         </div>
       </footer>      
     <script src="src/script/main.js"></script>
+    <script src="src/script/login.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="src/app/js.cookie.js"></script>
 	<script src="src/app/settings.js"></script>
@@ -63,19 +70,7 @@
       $("#suap-logout-button").click(function(){
           suap.logout();
           window.location.href = "index.html";
-      });  
-      function login() {
-        var loginButton = document.getElementById("Login-suap");
-        loginButton.innerHTML = 'Carregando...'
-        setTimeout(() => {
-            window.location.href = suap.getLoginURL();
-        }, 3000);
-        if(loginButton.click = true) {
-            setTimeout(() => {
-                loginButton.innerHTML = 'Autenticado com Sucesso';
-            }, 3000);
-        }
-      }
+      });
     </script>
 </body>
 </html>
