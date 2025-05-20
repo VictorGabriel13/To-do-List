@@ -14,9 +14,11 @@ function verificarRotina() {
     // Exibe alerta com base nos estados
     if (todosMarcados) {
         msgAlert.innerHTML = 'Rotina Concluída';
+        msgAlert.style.animation = 'none'
         msgAlert.classList.remove('erro'); // remove fundo vermelho
     } else {
-        msgAlert.innerHTML = 'Rotina não Concluída';
+        msgAlert.innerHTML = '⚠️ Rotina não Concluída ⚠️';
+        msgAlert.style.animation = 'AnimationAlert 1s infinite ease-in'; // Animação de Erro
         msgAlert.classList.add('erro'); // aplica fundo vermelho
     }
 
@@ -26,7 +28,7 @@ function verificarRotina() {
         msgAlert.innerHTML = '';
         msgAlert.style.display = 'none';
         msgAlert.classList.remove('erro'); // volta para cor padrão
-    }, 10000); // 10 Segundos
+    }, 1000000000); // 11 dias
 }
 
 function rotinaText() {
@@ -64,6 +66,7 @@ function guardarRotina() {
 function resetarRotina() {
     const hoje = new Date().toLocaleDateString(); // Ex: "17/05/2025"
     const ultimaData = localStorage.getItem('ultimaData');
+    const limpar = document.getElementById("resetRotina");
 
     // Essa Função compara a data de hoje com a última data salva. Se for um novo dia, ele limpa o localStorage, atualiza a data e recarrega a página.
 
@@ -71,6 +74,10 @@ function resetarRotina() {
         localStorage.clear();
         localStorage.setItem('ultimaData', hoje); // Salva a nova data
         location.reload(); // Recarrega a página para limpar inputs visuais
+    }
+    else if(limpar.click = true) { // Botão de Limpeza;
+        localStorage.clear();
+        location.reload();
     }
 }
  
@@ -90,6 +97,8 @@ function resetarRotina() {
 // Chama a função uma vez ao carregar
 mostrarHoras();
 
+Código Anterior da Função de resetar a Rotina;
+
 // Atualiza a cada segundo
 setInterval(mostrarHoras, 1000); */
 
@@ -98,7 +107,7 @@ function mostrarHoras() {
     const horaAtual = new Date().toLocaleString();
     let hora = horaAtual // pega a hora atual (0-23)
     let horaFormatada = hora > 12 ? hora - 12 : (hora === 0 ? 12 : hora); // converte para 12h
-    let periodo = hora >= 12 ? "PM" : "AM"; // define AM ou PM
+    let periodo = hora >= 12 ? " PM" : " AM"; // define AM ou PM
 
 
     // Insere a hora formatada no span

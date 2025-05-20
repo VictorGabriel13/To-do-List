@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="src/img/list-logo.webp" type="image/x-icon">
 </head>
 <body onload="guardarRotina()">
+    <section class="colum">
     <section id="TopBar">
         <p><strong>Seja Bem Vindo</strong> <span style="font-weight: bold;" id="nome"></span></p>
             <div>
@@ -26,7 +27,7 @@
     <section class="container-colum">
         <div>
             <ul>
-                <li>
+                <li id="space-white">
                     <input type="checkbox" onclick="verificarRotina()" name="CheckBox1" class="todo-check">
                     <input type="text" class="todo-text" oninput="rotinaText()" placeholder="Digite uma Atividade" value="Estudar">
                 </li>
@@ -39,6 +40,13 @@
     </section>
     <div id="Alert"></div>
     </main>
+    </section>
+    <aside id="produtividade">
+        <div>
+            <h1>Produtividade</h1>
+            <button type="reset" id="resetRotina" onclick="resetarRotina()">Excluir Rotina</button>
+        </div>
+    </aside>
     <footer>
         <div class="footer-container">
           <p>&copy; 2025 - Todos os direitos reservados</p>
@@ -52,7 +60,6 @@
   	<script src="src/app/client.js"></script>
     <script>
       var suap = new SuapClient(SUAP_URL, CLIENT_ID, REDIRECT_URI, SCOPE);
-      var welcome = document.getElementById('Welcome');
       suap.init();
       $(document).ready(function () {
       		//$("#suap-login-button").attr('href', suap.getLoginURL());

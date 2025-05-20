@@ -26,6 +26,15 @@ header p {
     text-align: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.148);
 }
+#produtividade {
+    background-color: #2B3035;
+    padding: 20px;
+    width: 20%;
+    height: 100px; /* ou 30% da tela*/
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.148);
+}
 input[type="text"] {
     border-radius: 15px;
     margin: 15px;
@@ -47,6 +56,9 @@ input[type="CheckBox"]{
     transform: scale(2.1);
     cursor: pointer;
 }
+#space-white {
+    margin-top: 30px;
+}
 ul, li {
     list-style: none;
     margin-top: -2px;
@@ -54,6 +66,11 @@ ul, li {
 }
 section > div > ul {
     margin-right: 30px;
+}
+.colum {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 #Alert {
     /* Tom de Verde Legal #099452 ou #1c7f55*/
@@ -64,10 +81,31 @@ section > div > ul {
     border-radius: 10px;
     padding: 10px;
     font-size: 17px;
-    margin-top: 15px;
+    margin-top: 30px;
     cursor: pointer;
     transition: 1.5s ease;
+    animation: AnimationAlert 1s infinite ease-in; /* Animação de Alerta Vermelho */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.159);
+}
+@keyframes AnimationAlert { /* Animação de  Alerta Vermelho */
+    0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.15);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  80% {
+    transform: scale(1.10);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 #Alert.erro {
     background: #dc143c;
@@ -78,7 +116,7 @@ section > div > ul {
     left: 50%;
     transform: translate(-50%);
     width: 100%;
-    height: 3px;
+    height: 5px;
 }
 #TopBar {
     display: flex;
@@ -97,7 +135,7 @@ section > div > ul {
 #TopBar > div > p {
     margin-top: -10px;
 }
-#Login-suap {
+#Login-suap, #resetRotina {
     background-color: #0B5ED7;
     color: #DEE2E6;
     padding: 5px;
@@ -107,10 +145,13 @@ section > div > ul {
     border-radius: 10px;
     width: 50%;
     margin-right: 10px;
+    transition: 3s ease;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.279);
 }
-#Login-suap:hover {
+#Login-suap:hover, #resetRotina:hover {
     background-color: #5491ed;
+    transform: scale(1.06);
+    transition: 3s ease;
     cursor: pointer;
 }
 footer {

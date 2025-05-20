@@ -24,6 +24,12 @@
         border-radius: 15px;
         text-align: center;
     }
+    #produtividade {
+        display: none; /* Em Manutenção KKKKK */
+    }
+    #space-white {
+    margin-top: 35px;
+}
     input[type="text"] {
         border-radius: 15px;
         padding: 10px;
