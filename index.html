@@ -29,11 +29,11 @@
             <ul>
                 <li id="space-white">
                     <input type="checkbox" onclick="verificarRotina()" name="CheckBox1" class="todo-check">
-                    <input type="text" class="todo-text" oninput="rotinaText()" placeholder="Digite uma Atividade" value="Estudar">
+                    <input type="text" class="todo-text" oninput="rotinaText()" placeholder="Digite uma Atividade" value="">
                 </li>
                 <li>
                     <input type="checkbox" name="CheckBox2" onclick="verificarRotina()" class="todo-check">
-                    <input type="text" class="todo-text" oninput="rotinaText()" placeholder="Digite uma Atividade" value="Jogar Basquete">
+                    <input type="text" class="todo-text" oninput="rotinaText()" placeholder="Digite uma Atividade" value="">
                 </li>
             </ul>
         </div>
@@ -44,6 +44,7 @@
     <aside id="produtividade">
         <div>
             <h1>Produtividade</h1>
+            <p>Nivel de Produtividade <span id="idProdut"></span></p>
             <button type="reset" id="resetRotina" onclick="resetarRotina()">Excluir Rotina</button>
         </div>
     </aside>
