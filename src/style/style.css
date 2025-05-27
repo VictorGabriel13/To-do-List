@@ -29,14 +29,14 @@ header p {
 #produtividade {
     background-color: #2B3035;
     padding: 20px;
-    width: 20%;
-    height: 130px; /* ou 30% da tela*/
+    width: 25%;
+    height: auto; /* ou 30% da tela*/
     border-radius: 15px;
     text-align: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.148);
 }
-#produtividade > div > p {
-    text-align: left;
+#produtividade > div > h1 {
+    font-size: 30px;
 }
 input[type="text"] {
     border-radius: 15px;

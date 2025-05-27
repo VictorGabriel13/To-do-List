@@ -121,59 +121,31 @@ mostrarHoras();
 // Atualiza a cada segundo
 setInterval(mostrarHoras, 1000);
 
+// Avaliar automaticamente ao carregar a página
 function produtividade() {
   const checkboxes = document.getElementsByClassName('todo-check');
   let marcados = 0;
 
-  // Converter HTMLCollection em array
   Array.from(checkboxes).forEach(checkbox => {
     if (checkbox.checked) {
       marcados++;
     }
   });
 
-  let mensagem = "";
+  let mensagem = document.getElementById("idProdut");
+  let msgRendimento = document.getElementById("idRendimento")
   if (marcados === 0) {
-    mensagem = " 0% 😴";
-  } else if (marcados <= 2) {
-    mensagem = "25% 😐";
-  } else if (marcados <= 4) {
-    mensagem = "50% 😄";
+    mensagem.innerHTML = '<span style="color: #099452;">0%</span> 😴';
+    msgRendimento.innerHTML = 'Nada Produtivo 👎🏼'
+  } else if (marcados == 1) {
+    mensagem.innerHTML = '<span style="color: #099452;">50%</span>😐';
+    msgRendimento.innerHTML = 'Pouco Produtivo ☹️'
+  } else if (marcados == 2) {
+    mensagem.innerHTML = '<span style="color: #099452;">100%</span>😄';
+    msgRendimento.innerHTML = 'Super produtivo 🚀'
   } else {
-    mensagem = "100% 🚀";
+    mensagem.innerHTML = "Super produtivo 🚀";
   }
-
-  document.getElementById("idProdut").innerHTML = mensagem;
 }
 
-// Avaliar automaticamente ao carregar a página
-function produtividade() {
-  const checkboxes = document.getElementsByClassName('todo-check');
-  let marcados = 0;
-
-  // Converter HTMLCollection em array
-  Array.from(checkboxes).forEach(checkbox => {
-    if (checkbox.checked) {
-      marcados++;
-    }
-  });
-
-  let mensagem = "";
-  if (marcados === 0) {
-    mensagem = "Nada produtivo 😴";
-  } else if (marcados <= 2) {
-    mensagem = "Pouco produtivo 😐";
-  } else if (marcados <= 4) {
-    mensagem = "Produtivo 😄";
-  } else {
-    mensagem = "Super produtivo 🚀";
-  }
-
-  document.getElementById("idProdut").innerHTML = mensagem;
-}
-
-// Avaliar automaticamente ao carregar a página
-setInterval(() => {
-  location.reload(); // Recarrega a página automaticamente a cada 5 segundos;
-}, 5000);
-window.addEventListener('load', produtividade);
+setInterval(produtividade, 500); // Atualiza o Texto a cada meio segundo
